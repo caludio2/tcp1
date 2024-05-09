@@ -11,11 +11,13 @@ TagManager:
   - espinho
   - save
   - caixa
+  - tiro
+  - parede
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - ground
   - Water
   - UI
   - 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class tiro : MonoBehaviour
 {
+    public float speed;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +15,10 @@ public class tiro : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D Col)
     {
+        Vector3 direction = (transform.position - Col.transform.position).normalized;
+
+        Col.gameObject.GetComponent<Rigidbody2D>().AddForce (direction * -1000);
         Destroy(this.gameObject);
     }
 }
+
