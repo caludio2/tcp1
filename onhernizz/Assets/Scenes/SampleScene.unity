@@ -1319,6 +1319,7 @@ GameObject:
   - component: {fileID: 1322838438}
   - component: {fileID: 1322838441}
   - component: {fileID: 1322838442}
+  - component: {fileID: 1322838443}
   m_Layer: 1
   m_Name: player
   m_TagString: Player
@@ -1394,8 +1395,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.13411888, g: 0.49928153, b: 0.78113204, a: 1}
+  m_Sprite: {fileID: -3053733144552245176, guid: d0eed80288589ef429f35dbf8582763e, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1436,18 +1437,20 @@ MonoBehaviour:
   impulso: 0
   forcadopulo: 10
   lugar: 0
+  range: 0
   forca: {fileID: 0}
   player: {fileID: 1322838440}
-  lugardespawn: {x: 0, y: 0, z: 0}
-  mao: {fileID: 0}
-  segurando: 0
   coracao:
   - {fileID: 1668574162}
   - {fileID: 1565081938}
   - {fileID: 1461618340}
   - {fileID: 1331142696}
   - {fileID: 22542989}
+  naparde: 0
   vidamaxima: 5
+  Cam: {fileID: 0}
+  playerCol: {fileID: 0}
+  chaoCol: {fileID: 0}
 --- !u!70 &1322838442
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1483,6 +1486,27 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 1}
   m_Direction: 0
+--- !u!95 &1322838443
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322838436}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 34f09641aeac9d34fabf714a5d45c856, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1331142694
 GameObject:
   m_ObjectHideFlags: 0
