@@ -10,6 +10,8 @@ public class grapllinggun : MonoBehaviour
     public LayerMask layer;
     public float praplleDistance;
     public float Distancia;
+    public Animator playerAnim;
+    public Rigidbody2D rb;
 
     void Start()
     {
@@ -35,19 +37,24 @@ public class grapllinggun : MonoBehaviour
                     joint.enabled = true;
                     //joint.distance = praplleDistance;
                     rope.enabled = true;
-
+                    playerAnim.SetBool("grab",true);
                     rope.SetPosition(0,pointGrapler);
                     rope.SetPosition(1,transform.position);
+
+                    Vector2 rotacao = new Vector2(pointGrapler.x,pointGrapler.y);
+                    transform.up = rotacao + new Vector2(0,90);
                 }
             }
         }
         if(Input.GetMouseButtonUp(0))
         {
+            playerAnim.SetBool("grab",false);
             joint.enabled = false;
             rope.enabled = false;
         }
         if(rope.enabled == true)
         {
+
             rope.SetPosition(1,transform.position);
         }
     }
