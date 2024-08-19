@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/sprite fantasma.gif.meta
 <<<<<<< HEAD
 guid: 5fadaaf5aeaa3284ab6616f684c361a1
 =======
 guid: 969febd779203a14fb8fa71c2fd625fb
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+guid: 969febd779203a14fb8fa71c2fd625fb
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/sprite fantasma.gif.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,8 +101,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/sprite fantasma.gif.meta
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/sprite fantasma.gif.meta
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -138,7 +145,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/sprite fantasma.gif.meta
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/sprite fantasma.gif.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class muv : MonoBehaviour
 {
-    public float vel,impulso,forcadopulo,lugar,range;
+    public float vel,impulso,forcadopulo,lugar,range,i;
     public Rigidbody2D forca;
     public Transform player;
     Vector3 lugardespawn;
@@ -13,7 +13,7 @@ public class muv : MonoBehaviour
     bool segurando;
     public Image[] coracao;
     public bool naparde;
-    public int vidamaxima = 6,i;
+    public int vidamaxima = 6;
     public Camera Cam;
     Vector3 mousePos;
     public Collider2D playerCol,chaoCol;
@@ -32,11 +32,15 @@ public class muv : MonoBehaviour
         {
             impulso = 1;
 
-        }     
-
+        }
+        if (Col.gameObject.CompareTag("caldeirao"))
+        {
+            forca.AddForce(new Vector3(0, forcadopulo, 0), ForceMode2D.Impulse);
+        }
         
 
-        if(Col.gameObject.CompareTag("ik"))
+
+        if (Col.gameObject.CompareTag("ik"))
         {
             vidamaxima = vidamaxima - 5;
         }
@@ -77,6 +81,10 @@ public class muv : MonoBehaviour
             Destroy(zol.gameObject);
             Instantiate(particulafoda3,transform.position,Quaternion.identity);
         }
+        if (zol.gameObject.CompareTag("agua"))
+        {
+            Instantiate(particulafoda4, transform.position, Quaternion.identity);
+        }
     }
      void FixedUpdate()
     {
@@ -93,7 +101,7 @@ public class muv : MonoBehaviour
     }
     void vida()
     {
-        if(vidamaxima < 0)
+        if(vidamaxima <= 0)
         {
             transform.position = new Vector3(lugardespawn.x,lugardespawn.y,transform.position.z);
             vidamaxima = 5;
@@ -118,8 +126,8 @@ public class muv : MonoBehaviour
         if(impulso == 0)
         {
             playerAnim.SetBool("andando",false);
-            i++;
-            if(i >= 150)
+            i = i + 1 * Time.deltaTime;
+            if(i >= 0.3)
             {
             Instantiate(particulafoda2,transform.position,Quaternion.identity);
             i = 0;

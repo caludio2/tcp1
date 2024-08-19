@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/fogo-Sheet-Sheet-export.png.meta
 <<<<<<< HEAD
 guid: efce8ec98b3a3ee4facde43a86dd30c3
 =======
 guid: 88162463917ac7741a3e934b2b77a3a1
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+guid: 88162463917ac7741a3e934b2b77a3a1
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/fogo-Sheet-Sheet-export.png.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,8 +101,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/fogo-Sheet-Sheet-export.png.meta
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/fogo-Sheet-Sheet-export.png.meta
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -138,7 +145,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/fogo-Sheet-Sheet-export.png.meta
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/fogo-Sheet-Sheet-export.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []

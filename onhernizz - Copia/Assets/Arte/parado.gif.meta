@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/parado.gif.meta
 <<<<<<< HEAD
 guid: 300c894c3935a0e45b4946590f1c690c
 =======
 guid: b079de5a75fd0ff429cc7bc648fec328
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+guid: b079de5a75fd0ff429cc7bc648fec328
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/parado.gif.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,8 +101,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/parado.gif.meta
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/parado.gif.meta
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -138,7 +145,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/parado.gif.meta
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/parado.gif.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []

@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/patada.gif.meta
 <<<<<<< HEAD
 guid: 012a69ac25b512743a960905d407dd0f
 =======
 guid: 1fe0039d0028f2b4d88d0227cd04c080
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+guid: 1fe0039d0028f2b4d88d0227cd04c080
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/patada.gif.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,8 +101,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/patada.gif.meta
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/patada.gif.meta
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -138,7 +145,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/patada.gif.meta
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/patada.gif.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []

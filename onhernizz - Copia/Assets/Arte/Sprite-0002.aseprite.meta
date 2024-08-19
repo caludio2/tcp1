@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/Sprite-0002.aseprite.meta
 <<<<<<< HEAD
 guid: 4cfda9c6d1bcab8478ceadae5488875a
 =======
 guid: fac8c73a9f0e48446a81be9e267d5fef
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+guid: fac8c73a9f0e48446a81be9e267d5fef
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/Sprite-0002.aseprite.meta
 ScriptedImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -11,6 +15,7 @@ ScriptedImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/Sprite-0002.aseprite.meta
 <<<<<<< HEAD
   script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
   textureImporterSettings:
@@ -479,6 +484,8 @@ ScriptedImporter:
   spritePackingTag: 
   canvasSize: {x: 64, y: 64}
 =======
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/Sprite-0002.aseprite.meta
   script: {fileID: 11500000, guid: 6fc2c93369695264baed5356a4ddb729, type: 3}
   Settings:
     TextureType: 8
@@ -494,4 +501,7 @@ ScriptedImporter:
     FilterMode: 0
     AnisoLevel: 1
     InnerPadding: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/Sprite-0002.aseprite.meta
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/Sprite-0002.aseprite.meta

@@ -1,9 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/gato sentando.gif.meta
 <<<<<<< HEAD
 guid: c3aae89b927753f459adede9767671c6
 =======
 guid: fc7407ade7356dd4e82e0790a5692e54
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+guid: fc7407ade7356dd4e82e0790a5692e54
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/gato sentando.gif.meta
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -97,8 +101,11 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/gato sentando.gif.meta
 <<<<<<< HEAD
 =======
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/gato sentando.gif.meta
   - serializedVersion: 3
     buildTarget: WebGL
     maxTextureSize: 2048
@@ -138,7 +145,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:onhernizz - Copia/Assets/Arte/gato sentando.gif.meta
 >>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b
+=======
+>>>>>>> a43b16b7278e7aebeb083bdf001fd88942af709b:onhernizz/Assets/Arte/gato sentando.gif.meta
   spriteSheet:
     serializedVersion: 2
     sprites: []
