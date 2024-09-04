@@ -6,7 +6,7 @@ public class grapllinggun : MonoBehaviour
 {
     public LineRenderer rope;
     private Vector3 pointGrapler;
-    private DistanceJoint2D joint;
+    public DistanceJoint2D joint;
     public LayerMask layer;
     public float praplleDistance;
     public float Distancia;
@@ -15,7 +15,6 @@ public class grapllinggun : MonoBehaviour
 
     void Start()
     {
-        joint = gameObject.GetComponent<DistanceJoint2D>();
         joint.enabled = false;
         rope.enabled = false;
     }
@@ -27,35 +26,29 @@ public class grapllinggun : MonoBehaviour
         {
             RaycastHit2D hit = Physics2D.Raycast(origin: Camera.main.ScreenToWorldPoint(Input.mousePosition),direction:Vector2.zero,distance: Mathf.Infinity,layerMask: layer);
             Distancia = Vector2.Distance(hit.point,transform.position);
-            if(Distancia < 1000)
-            {
                 if(hit.collider != null)
                 {
                     pointGrapler = hit.point;
                     pointGrapler.z = 0;
-                    joint.connectedAnchor = pointGrapler;
                     joint.enabled = true;
-                    //joint.distance = praplleDistance;
+                    joint.connectedAnchor = pointGrapler;
+                    
                     rope.enabled = true;
-                    playerAnim.SetBool("grab",true);
                     rope.SetPosition(0,pointGrapler);
-                    rope.SetPosition(1,transform.position);
-
-                    Vector2 rotacao = new Vector2(pointGrapler.x,pointGrapler.y);
-                    transform.up = rotacao + new Vector2(0,90);
+                    rope.SetPosition(1, transform.position);
                 }
-            }
+            
         }
         if(Input.GetMouseButtonUp(0))
         {
-            playerAnim.SetBool("grab",false);
             joint.enabled = false;
             rope.enabled = false;
         }
         if(rope.enabled == true)
         {
-
-            rope.SetPosition(1,transform.position);
+            rope.SetPosition(0, pointGrapler);
+            rope.SetPosition(1, transform.position);
+            joint.connectedAnchor = pointGrapler;
         }
     }
 }

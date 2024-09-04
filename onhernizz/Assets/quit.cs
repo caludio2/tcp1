@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class quit : MonoBehaviour
 {
-    public GameObject a ;
     // Start is called before the first frame update
     void Start()
     {
@@ -16,9 +15,8 @@ public class quit : MonoBehaviour
     {
         
     }
-    public void Quitgame()
+    public void Quit()
     {
         Application.Quit();
-        a.SetActive(true);
     }
 }

@@ -5,20 +5,19 @@ using UnityEngine;
 public class tiro : MonoBehaviour
 {
     public float speed;
+    public Transform player;
+    public Rigidbody2D forca;
 
     // Start is called before the first frame update
     void Start()
     {
-        Transform player = GameObject.FindWithTag("Player").GetComponent<Transform>();
-        Rigidbody2D forca = GetComponent<Rigidbody2D>();
-        forca.AddForce(player.position - transform.position,ForceMode2D.Impulse);
+        player = GameObject.FindWithTag("Player").GetComponent<Transform>();
+        forca.AddForce((player.position - transform.position) * speed,ForceMode2D.Impulse);
     }
     void OnCollisionEnter2D(Collision2D Col)
     {
-        Vector3 direction = (transform.position - Col.transform.position).normalized;
-
-        Col.gameObject.GetComponent<Rigidbody2D>().AddForce (direction * -1000);
         Destroy(this.gameObject);
+        
     }
 }
 

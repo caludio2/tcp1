@@ -16,6 +16,7 @@ TagManager:
   - play
   - coin
   - ik
+  - agua
   layers:
   - Default
   - TransparentFX

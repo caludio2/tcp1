@@ -9,9 +9,10 @@ public class muv : MonoBehaviour
     public Rigidbody2D forca;
     public Transform player;
     Vector3 lugardespawn;
-    public GameObject mao,save1,particulafoda,particulafoda2,particulafoda3,particulafoda4;
+    public GameObject mao,save1,particulapulo,particulamoeda,particularastro;
     bool segurando;
     public Image[] coracao;
+    public Image quit,play;
     public bool naparde;
     public int vidamaxima = 6;
     public Camera Cam;
@@ -23,16 +24,31 @@ public class muv : MonoBehaviour
     private void Start()
     {
         forca = GetComponent<Rigidbody2D>();
+        coracao[0].enabled = false;
+        coracao[1].enabled = false;
+        coracao[2].enabled = false;
+        coracao[3].enabled = false;
+        coracao[4].enabled = false;
     }
 
-    
+    void OnTriggerEnter2D(Collider2D zol)
+    {
+        if (zol.gameObject.CompareTag("coin"))
+        {
+            Destroy(zol.gameObject);
+            Instantiate(particulamoeda, transform.position, Quaternion.identity);
+        }
+    }
     void OnCollisionEnter2D(Collision2D Col)
     {
         if(Col.gameObject.CompareTag("chao"))
         {
             impulso = 1;
-
+            forca.velocity = new Vector2(0,0);
+            forca.gravityScale = 0.1f;
+            vel = 8;
         }
+
         if (Col.gameObject.CompareTag("caldeirao"))
         {
             forca.AddForce(new Vector3(0, forcadopulo, 0), ForceMode2D.Impulse);
@@ -40,7 +56,7 @@ public class muv : MonoBehaviour
         
 
 
-        if (Col.gameObject.CompareTag("ik"))
+            if (Col.gameObject.CompareTag("ik"))
         {
             vidamaxima = vidamaxima - 5;
         }
@@ -58,6 +74,7 @@ public class muv : MonoBehaviour
                 coracao[2].enabled = true;
                 coracao[3].enabled = true;
                 coracao[4].enabled = true;
+            quit.enabled = false;
             }
         if(Col.gameObject.CompareTag("espinho"))
                 {
@@ -73,20 +90,18 @@ public class muv : MonoBehaviour
                 mao = Col.gameObject;
             }
         }
+        
     }
-    void OnTriggerEnter2D(Collider2D zol)
+    void OnCollisionExit2D(Collision2D dol)
     {
-        if(zol.gameObject.CompareTag("coin"))
+        if (dol.gameObject.CompareTag("chao"))
         {
-            Destroy(zol.gameObject);
-            Instantiate(particulafoda3,transform.position,Quaternion.identity);
+            forca.gravityScale = 2;
         }
-        if (zol.gameObject.CompareTag("agua"))
-        {
-            Instantiate(particulafoda4, transform.position, Quaternion.identity);
-        }
+        
     }
-     void FixedUpdate()
+   
+    void FixedUpdate()
     {
        
         
@@ -116,7 +131,7 @@ public class muv : MonoBehaviour
                 forca.AddForce(new Vector3(0,forcadopulo,0),ForceMode2D.Impulse);
                 impulso = impulso - 1;
                 playerAnim.SetBool("pulo",true);
-                Instantiate(particulafoda,transform.position,Quaternion.identity);
+                Instantiate(particulapulo,transform.position,Quaternion.identity);
             }
             else
             {
@@ -125,12 +140,13 @@ public class muv : MonoBehaviour
         }
         if(impulso == 0)
         {
+            Physics2D.gravity = new Vector2(0, -10);
             playerAnim.SetBool("andando",false);
             i = i + 1 * Time.deltaTime;
             if(i >= 0.3)
             {
-            Instantiate(particulafoda2,transform.position,Quaternion.identity);
-            i = 0;
+                Instantiate(particularastro,transform.position,Quaternion.identity);
+                i = 0;
             }
         }
     }
@@ -140,7 +156,7 @@ public class muv : MonoBehaviour
         {
             forca.velocity = new Vector2(vel,forca.velocity.y);
             transform.rotation = Quaternion.Euler(0,0,0);
-            lugar = 1.7f;
+            lugar = 2f;
             playerAnim.SetBool("andando",true);
         }
         if(Input.GetKeyUp(KeyCode.D))
@@ -154,7 +170,7 @@ public class muv : MonoBehaviour
         {
             forca.velocity = new Vector2(-vel,forca.velocity.y);
             transform.rotation = Quaternion.Euler(0,180,0);
-            lugar = -1.7f;
+            lugar = -2f;
             playerAnim.SetBool("andando",true);
         }
         if(Input.GetKeyUp(KeyCode.A))
