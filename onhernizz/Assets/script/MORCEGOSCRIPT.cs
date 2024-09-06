@@ -7,6 +7,8 @@ public class MORCEGOSCRIPT : MonoBehaviour
     public Transform idlepoint;
     public Transform player;
     public float speed;
+    public GameObject morcego;
+    public Animator morguesoAnim;
     // Start is called before the first frame update
     void Start()
     {
@@ -24,7 +26,19 @@ public class MORCEGOSCRIPT : MonoBehaviour
         }
         else
         {
-            transform.position = Vector2.MoveTowards(transform.position, idlepoint.position, 3 * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, idlepoint.position,8 * Time.deltaTime);
+        }
+        if(new Vector3(transform.position.x, transform.position.y, 0) == new Vector3(idlepoint.position.x, idlepoint.position.y,0))
+        {
+            morguesoAnim.SetBool("voando", true);
+            morcego.transform.localScale = new Vector3(morcego.transform.localScale.x, 2, morcego.transform.localScale.z);
+            Debug.Log(" voa");
+        }
+        else
+        {
+            Debug.Log("parou");
+            morguesoAnim.SetBool("voando", false);
+            morcego.transform.localScale = new Vector3(morcego.transform.localScale.x, 2, morcego.transform.localScale.z);
         }
     }
 }
