@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class muv : MonoBehaviour
 {
@@ -19,7 +20,9 @@ public class muv : MonoBehaviour
     Vector3 mousePos;
     public Collider2D playerCol,chaoCol;
     public Animator playerAnim;
-
+    public TextMeshProUGUI text;
+    public TextMeshProUGUI text2;
+    public int moeda,vagalume;
 
     private void Start()
     {
@@ -35,8 +38,17 @@ public class muv : MonoBehaviour
     {
         if (zol.gameObject.CompareTag("coin"))
         {
+            moeda += 1;
             Destroy(zol.gameObject);
             Instantiate(particulamoeda, transform.position, Quaternion.identity);
+            text.text = "Score:   :" + moeda;
+        }
+        if (zol.gameObject.CompareTag("coletavel"))
+        {
+            vagalume += 1;
+            Destroy(zol.gameObject);
+            Instantiate(particulamoeda, transform.position, Quaternion.identity);
+            text2.text = vagalume + "/4 vaglumes";
         }
     }
     void OnCollisionEnter2D(Collision2D Col)
@@ -44,8 +56,6 @@ public class muv : MonoBehaviour
         if(Col.gameObject.CompareTag("chao"))
         {
             impulso = 1;
-            forca.velocity = new Vector2(0,0);
-            forca.gravityScale = 0.1f;
             vel = 8;
         }
 
@@ -140,7 +150,6 @@ public class muv : MonoBehaviour
         }
         if(impulso == 0)
         {
-            Physics2D.gravity = new Vector2(0, -10);
             playerAnim.SetBool("andando",false);
             i = i + 1 * Time.deltaTime;
             if(i >= 0.3)
