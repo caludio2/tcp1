@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 8419026317672533955}
   - component: {fileID: 9144026585323933608}
-  - component: {fileID: 5356212747664489836}
-  - component: {fileID: 1379593806837389818}
+  - component: {fileID: 280783262210482721}
+  - component: {fileID: 7959625633926082773}
   m_Layer: 0
-  m_Name: VASSORA
+  m_Name: FANTASMA
   m_TagString: espinho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 4496687791230834520}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 105.64104, y: -96.36888, z: 10.875053}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 58.96103, y: -97.39888, z: 10.875053}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1066694743, guid: 5e8a700f39d188f4fb05b073df2c060b, type: 3}
+  m_Sprite: {fileID: -1411527751, guid: 4d100f9b5b2f24a45a4b78c43c9bc6fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -86,7 +86,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5356212747664489836
+--- !u!114 &280783262210482721
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,13 +95,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 4496687791230834520}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ee779c1c3a3c6f409edfd97bf82f83b, type: 3}
+  m_Script: {fileID: 11500000, guid: 840b325dccfad8742bbf3f6af87fc91e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  a: 0
+  alvo1: {fileID: 0}
+  alvo2: {fileID: 0}
+  alvo: {x: 0, y: 0, z: 0}
   vel: 2
-  seguir: 1
---- !u!61 &1379593806837389818
+--- !u!61 &7959625633926082773
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,16 +135,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0.33}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.0075806617}
-    oldSize: {x: 0.9375, y: 0.625}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.25, y: 0.35}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.61}
+  m_Size: {x: 0.25, y: 0.35}
   m_EdgeRadius: 0

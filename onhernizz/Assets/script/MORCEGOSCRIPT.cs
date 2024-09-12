@@ -17,12 +17,13 @@ public class MORCEGOSCRIPT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        player = GameObject.Find("player").transform;
         float step = speed * Time.deltaTime;
         float distancia = Vector3.Distance(player.position, idlepoint.position);
         if (distancia < 10)
         {
             Debug.Log(distancia);
-            player = GameObject.Find("player").transform;
+
             transform.position = Vector3.MoveTowards(transform.position, player.position, 2 * Time.deltaTime);
         }
         else
