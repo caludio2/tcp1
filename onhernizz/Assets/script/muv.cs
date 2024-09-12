@@ -8,9 +8,8 @@ public class muv : MonoBehaviour
 {
     public float vel,impulso,forcadopulo,lugar,range,i;
     public Rigidbody2D forca;
-    public Transform player;
     Vector3 lugardespawn;
-    public GameObject mao,save1,particulapulo,particulamoeda,particularastro;
+    public GameObject mao,particulapulo,particulamoeda, particularastro;
     bool segurando;
     public Image[] coracao;
     public Image quit,play;
@@ -23,6 +22,7 @@ public class muv : MonoBehaviour
     public TextMeshProUGUI text;
     public TextMeshProUGUI text2;
     public int moeda,vagalume;
+    public Transform mapa2;
 
     private void Start()
     {
@@ -32,6 +32,8 @@ public class muv : MonoBehaviour
         coracao[2].enabled = false;
         coracao[3].enabled = false;
         coracao[4].enabled = false;
+        text2.text = vagalume + "/4 vagalumes";
+        text.text = "Score:   :" + moeda;
     }
 
     void OnTriggerEnter2D(Collider2D zol)
@@ -48,7 +50,11 @@ public class muv : MonoBehaviour
             vagalume += 1;
             Destroy(zol.gameObject);
             Instantiate(particulamoeda, transform.position, Quaternion.identity);
-            text2.text = vagalume + "/4 vaglumes";
+            text2.text = vagalume + "/4 vagalumes";
+        }
+        if (zol.gameObject.CompareTag("janela"))
+        {
+            transform.position = new Vector3(mapa2.position.x, mapa2.position.y,0);
         }
     }
     void OnCollisionEnter2D(Collision2D Col)
@@ -58,11 +64,9 @@ public class muv : MonoBehaviour
             impulso = 1;
             vel = 8;
         }
+       
 
-        if (Col.gameObject.CompareTag("caldeirao"))
-        {
-            forca.AddForce(new Vector3(0, forcadopulo, 0), ForceMode2D.Impulse);
-        }
+         
         
 
 
@@ -73,7 +77,7 @@ public class muv : MonoBehaviour
 
         if(Col.gameObject.CompareTag("save"))
             {
-                lugardespawn = player.position;
+                lugardespawn = transform.position;
                 impulso = 1;
                 if(vidamaxima < 5)
                 {

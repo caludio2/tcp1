@@ -14,7 +14,6 @@ public class MORCEGOSCRIPT : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -22,6 +21,8 @@ public class MORCEGOSCRIPT : MonoBehaviour
         float distancia = Vector3.Distance(player.position, idlepoint.position);
         if (distancia < 10)
         {
+            Debug.Log(distancia);
+            player = GameObject.Find("player").transform;
             transform.position = Vector3.MoveTowards(transform.position, player.position, 2 * Time.deltaTime);
         }
         else
@@ -31,14 +32,12 @@ public class MORCEGOSCRIPT : MonoBehaviour
         if(new Vector3(transform.position.x, transform.position.y, 0) == new Vector3(idlepoint.position.x, idlepoint.position.y,0))
         {
             morguesoAnim.SetBool("voando", true);
-            morcego.transform.localScale = new Vector3(morcego.transform.localScale.x, 2, morcego.transform.localScale.z);
             Debug.Log(" voa");
         }
         else
         {
             Debug.Log("parou");
             morguesoAnim.SetBool("voando", false);
-            morcego.transform.localScale = new Vector3(morcego.transform.localScale.x, 2, morcego.transform.localScale.z);
         }
     }
 }

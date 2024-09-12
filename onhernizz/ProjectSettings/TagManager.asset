@@ -17,6 +17,8 @@ TagManager:
   - coin
   - ik
   - agua
+  - coletavel
+  - janela
   layers:
   - Default
   - TransparentFX
