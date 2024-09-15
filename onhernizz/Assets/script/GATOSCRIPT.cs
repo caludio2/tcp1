@@ -10,6 +10,7 @@ public class GATOSCRIPT : MonoBehaviour
     public Vector3 alvo;
     public Transform player;
     public float vel;
+    public float disalvo2;
     void Start()
     {
         alvo = alvo2.position;
@@ -18,15 +19,14 @@ public class GATOSCRIPT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector2.MoveTowards(transform.position, alvo, vel * Time.deltaTime);
-        float disalvo1 = Vector3.Distance(player.position, alvo2.position);
-        if (disalvo1 < 1)
+        disalvo2 = Vector3.Distance(player.position, alvo2.position);
+        if (disalvo2 < 10)
         {
-            alvo = alvo2.position;
+            transform.position = Vector3.MoveTowards(transform.position, alvo2.position, vel * Time.deltaTime);
         }
         else
         {
-            alvo = alvo1.position;
+            transform.position = Vector3.MoveTowards(transform.position, alvo1.position, vel * Time.deltaTime);
         }
     }
 }

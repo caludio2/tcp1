@@ -9,6 +9,7 @@ public class MORCEGOSCRIPT : MonoBehaviour
     public float speed;
     public GameObject morcego;
     public Animator morguesoAnim;
+    public float distancia;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,12 +18,13 @@ public class MORCEGOSCRIPT : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        player = GameObject.Find("player").transform;
+        
         float step = speed * Time.deltaTime;
-        float distancia = Vector3.Distance(player.position, idlepoint.position);
-        if (distancia < 10)
+        distancia = Vector3.Distance(player.position, idlepoint.position);
+        Debug.Log(distancia);
+        if (distancia < 20)
         {
-            Debug.Log(distancia);
+            
 
             transform.position = Vector3.MoveTowards(transform.position, player.position, 2 * Time.deltaTime);
         }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class menu : MonoBehaviour
 {
@@ -20,11 +21,6 @@ public class menu : MonoBehaviour
     }
     void OnMouseDown()
     {
-        if(play = true)
-        {
-            player.SetActive(true);
-        }
-        play = true;
-        player.transform.position = save1.transform.position;
+       SceneManager.LoadScene("fase1");
     }
 }
