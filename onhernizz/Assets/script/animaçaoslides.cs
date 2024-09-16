@@ -21,5 +21,6 @@ public class animaçaoslides : MonoBehaviour
             transform.rotation = Quaternion.Euler(0,0,Random.Range(-2,1));
             tempo = 0;
         }
+        
     }
 }
