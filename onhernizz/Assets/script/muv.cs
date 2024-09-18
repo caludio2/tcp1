@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class muv : MonoBehaviour
 {
@@ -21,8 +22,7 @@ public class muv : MonoBehaviour
     public Animator playerAnim;
     public TextMeshProUGUI text;
     public TextMeshProUGUI text2;
-    public int moeda,vagalume;
-    public Transform mapa2;
+    public int moeda, vagalume;
 
     private void Start()
     {
@@ -54,7 +54,7 @@ public class muv : MonoBehaviour
         }
         if (zol.gameObject.CompareTag("janela"))
         {
-            transform.position = new Vector3(mapa2.position.x, mapa2.position.y,0);
+            SceneManager.LoadScene("fase2");
         }
     }
     void OnCollisionEnter2D(Collision2D Col)
