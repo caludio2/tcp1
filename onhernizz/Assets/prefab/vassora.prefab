@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 9144026585323933608}
   - component: {fileID: 5356212747664489836}
   - component: {fileID: 1379593806837389818}
-  m_Layer: 0
-  m_Name: VASSORA
+  m_Layer: 7
+  m_Name: vassora
   m_TagString: espinho
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,6 +101,7 @@ MonoBehaviour:
   player: {fileID: 0}
   vel: 2
   seguir: 1
+  damage: 1
 --- !u!61 &1379593806837389818
 BoxCollider2D:
   m_ObjectHideFlags: 0

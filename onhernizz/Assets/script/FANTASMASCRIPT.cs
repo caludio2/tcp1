@@ -2,13 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FANTASMASCRIPT : MonoBehaviour
+public class FANTASMASCRIPT : MonoBehaviour , IDamageble
 {
     public int a;
     public Transform alvo1;
     public Transform alvo2;
     public Vector3 alvo;
     public float vel;
+
+    [SerializeField] private int damage;
+
+    public int Damage => damage;
 
     void Start()
     {

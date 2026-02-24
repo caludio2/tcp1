@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 9144026585323933608}
   - component: {fileID: 280783262210482721}
   - component: {fileID: 7959625633926082773}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FANTASMA
   m_TagString: espinho
   m_Icon: {fileID: 0}
@@ -103,6 +103,7 @@ MonoBehaviour:
   alvo2: {fileID: 0}
   alvo: {x: 0, y: 0, z: 0}
   vel: 2
+  damage: 1
 --- !u!61 &7959625633926082773
 BoxCollider2D:
   m_ObjectHideFlags: 0

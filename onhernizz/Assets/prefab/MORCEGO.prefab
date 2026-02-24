@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6101176959143753115}
   - component: {fileID: 4820102611186184814}
   - component: {fileID: 8749785071189371634}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MORCEGO
   m_TagString: espinho
   m_Icon: {fileID: 0}
@@ -104,6 +104,8 @@ MonoBehaviour:
   speed: 2
   morcego: {fileID: 7229616058484296466}
   morguesoAnim: {fileID: 4820102611186184814}
+  distancia: 0
+  damage: 0
 --- !u!95 &4820102611186184814
 Animator:
   serializedVersion: 5

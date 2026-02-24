@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MORCEGOSCRIPT : MonoBehaviour
+public class MORCEGOSCRIPT : MonoBehaviour ,IDamageble
 {
     public Transform idlepoint;
     public Transform player;
@@ -10,6 +10,11 @@ public class MORCEGOSCRIPT : MonoBehaviour
     public GameObject morcego;
     public Animator morguesoAnim;
     public float distancia;
+
+    [SerializeField] private int damage;
+
+    public int Damage => damage;
+
     // Start is called before the first frame update
     void Start()
     {

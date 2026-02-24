@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8791614641159446389}
   - component: {fileID: 1785296196301152139}
   - component: {fileID: 1566421331253439251}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: COBRA
   m_TagString: espinho
   m_Icon: {fileID: 0}
@@ -104,6 +104,7 @@ MonoBehaviour:
   alvo: {x: 0, y: 0, z: 0}
   player: {fileID: 0}
   vel: 20
+  disalvo2: 0
 --- !u!61 &1566421331253439251
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4277153706407623768}
   - component: {fileID: 5871999864401741882}
   - component: {fileID: 1294530706874695563}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: bola de fogo 1
   m_TagString: espinho
   m_Icon: {fileID: 0}
@@ -102,6 +102,7 @@ MonoBehaviour:
   speed: 0.0001
   player: {fileID: 0}
   forca: {fileID: 1294530706874695563}
+  damage: 1
 --- !u!61 &5871999864401741882
 BoxCollider2D:
   m_ObjectHideFlags: 0
