@@ -31,7 +31,7 @@ public class GetingSystem : MonoBehaviour
 
     public void ColectFeedBack(GameObject collisionGO)
     {
-        Destroy(collisionGO);
+        collisionGO.SetActive(false);
         UpdateText();
     }
     public void UpdateText()

@@ -32,8 +32,6 @@ public class muv : MonoBehaviour
     void Update()
     {
         andar();
-        enableJumpDetection(Vector2.right , wallDetectionLength);
-        enableJumpDetection(Vector2.left , wallDetectionLength);
         enableJumpDetection(Vector2.down , floorDetectionLength);
         pular();
     }

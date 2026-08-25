@@ -17,10 +17,10 @@ public class CANDELABROSCRIPT : MonoBehaviour
     void Update()
     {
         float distancia = Vector3.Distance(player.position, transform.position);
-        if (distancia < 15)
+        if (distancia < 30)
         {
             temposobrando += Time.deltaTime;
-            if(temposobrando > 5)
+            if(temposobrando > 2)
             {
                 temposobrando = 0;
                 Instantiate(boladefogo, transform.position+ new Vector3(0,0,1), Quaternion.Euler(0, 0, 0));

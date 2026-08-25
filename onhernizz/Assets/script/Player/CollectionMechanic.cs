@@ -1,13 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CollectionMechanic : MonoBehaviour
+public class CollectionMechanic2D : MonoBehaviour
 {
     public float radius = 5f;
-    public string collectibleTag = "Collectible"; // Tag dos objetos que podem ser pegos
-
-    GameObject inventario;
+    public string collectibleTag = "coletavel";
+    private GameObject inventario;
     public Vector3 offSet;
 
     void Update()
@@ -17,8 +14,13 @@ public class CollectionMechanic : MonoBehaviour
             GameObject target = GetClosest();
             if (target != null)
             {
+                Debug.Log("Peguei: " + target.name);
                 inventario = target;
-                target.SetActive(false);
+                inventario.SetActive(false);
+            }
+            else
+            {
+                Debug.Log("Nenhum objeto próximo!");
             }
         }
 
@@ -26,6 +28,7 @@ public class CollectionMechanic : MonoBehaviour
         {
             if (inventario != null)
             {
+                Debug.Log("Soltei: " + inventario.name);
                 inventario.SetActive(true);
                 inventario.transform.position = transform.position + offSet;
                 inventario = null;
@@ -35,16 +38,17 @@ public class CollectionMechanic : MonoBehaviour
 
     GameObject GetClosest()
     {
-        // Pega todos os colliders na cena dentro do raio
-        Collider[] hits = Physics.OverlapSphere(transform.position, radius);
+        // Usa OverlapCircle para 2D
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, radius);
+
         GameObject closest = null;
         float minDistance = Mathf.Infinity;
 
-        foreach (Collider hit in hits)
+        foreach (Collider2D hit in hits)
         {
             if (hit.CompareTag(collectibleTag))
             {
-                float dist = Vector3.Distance(transform.position, hit.transform.position);
+                float dist = Vector2.Distance(transform.position, hit.transform.position);
                 if (dist < minDistance)
                 {
                     closest = hit.gameObject;
@@ -56,22 +60,9 @@ public class CollectionMechanic : MonoBehaviour
         return closest;
     }
 
-    void OnDrawGizmos()
+    void OnDrawGizmosSelected()
     {
-        // Raio do círculo
         Gizmos.color = Color.green;
         Gizmos.DrawWireSphere(transform.position, radius);
-
-        // Objeto mais próximo
-        GameObject closest = GetClosest();
-        if (closest != null)
-        {
-            Gizmos.color = Color.red;
-            Vector3 size = closest.GetComponent<Renderer>()?.bounds.size ?? Vector3.one;
-            Gizmos.DrawWireCube(closest.transform.position, size);
-
-            // Linha até o jogador
-            Gizmos.DrawLine(transform.position, closest.transform.position);
-        }
     }
 }
